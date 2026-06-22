@@ -13,3 +13,10 @@ export const ZOD_ERROR_CODES = {
 };
 
 export const notFoundSchema = createMessageObjectSchema(HttpStatusPhrases.NOT_FOUND);
+
+/**
+ * Maximum number of tasks returned by the list endpoint in a single response.
+ * Clients that expect more results should paginate rather than relying on a
+ * larger page size.
+ */
+export const TASKS_PAGE_SIZE = 50;
