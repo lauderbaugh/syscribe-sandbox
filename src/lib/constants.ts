@@ -20,3 +20,10 @@ export const notFoundSchema = createMessageObjectSchema(HttpStatusPhrases.NOT_FO
  * larger page size.
  */
 export const TASKS_PAGE_SIZE = 50;
+
+/**
+ * Default maximum number of commit events returned by the history endpoint in a
+ * single response. Mirrors {@link TASKS_PAGE_SIZE}: clients that need more
+ * results should paginate rather than depend on a larger page size.
+ */
+export const COMMIT_EVENTS_PAGE_SIZE = 50;
