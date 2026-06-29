@@ -27,3 +27,12 @@ export const TASKS_PAGE_SIZE = 50;
  * results should paginate rather than depend on a larger page size.
  */
 export const COMMIT_EVENTS_PAGE_SIZE = 50;
+
+/**
+ * Upper bound on a client-supplied `pageSize` query parameter. Requests above
+ * this ceiling are clamped down to the relevant default page size (e.g.
+ * {@link TASKS_PAGE_SIZE} or {@link COMMIT_EVENTS_PAGE_SIZE}) rather than
+ * rejected, so a caller can ask for fewer results but never force a larger,
+ * more expensive response.
+ */
+export const MAX_REQUESTED_PAGE_SIZE = 100;
